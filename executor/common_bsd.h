@@ -9,9 +9,8 @@
 #include <stdarg.h>
 #include <stdbool.h>
 #include <string.h>
-#include <sys/syscall.h>
 #include <sys/ioctl.h>
-
+#include <sys/syscall.h>
 
 #if GOOS_netbsd
 
@@ -426,13 +425,13 @@ static void sandbox_common()
 
 #define WIFI_INITIAL_DEVICE_COUNT 2
 
-#define WIFI_IBSS_SSID							 \
-	{										  \
+#define WIFI_IBSS_SSID                                   \
+	{                                                \
 		0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x00 \
 	}
 
-#define WTAPIOCTLCRT	_IOW('W', 1, int)
-#define WTAPIOCTLDEL	_IOW('W', 2, int)
+#define WTAPIOCTLCRT _IOW('W', 1, int)
+#define WTAPIOCTLDEL _IOW('W', 2, int)
 
 static int wtapfd = -1;
 
